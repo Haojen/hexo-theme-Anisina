@@ -1,0 +1,169 @@
+---
+layout: layout
+---
+<style>
+    *{
+        /*border: thin red solid;*/
+    }
+    header .bg-header{
+        height: 560px;
+        background-color: #62A4FF;
+    }
+    /*头像*/
+    .bg-header .avatar img{
+        border-radius: 50%;
+        margin-top: 100px;
+        max-width: 170px;
+    }
+    .bg-header h1,
+    .bg-header h2{
+        color: white;
+    }
+    /*姓名*/
+    .bg-header h1{
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(15,15,15,.3);
+    }
+    /*描述*/
+    .bg-header h2{
+        font-size: 18px;
+        margin-top:12px;
+    }
+    /*整个作品展示区*/
+    section .works-area{
+        margin-top: -150px;
+    }
+    .works-area .works-item{
+        border-radius: 2px;
+        border: 1px solid #eee8d5;
+        margin-bottom: 50px;
+        box-shadow: 8px 5px 10px rgba(0,0,0,.2);
+    }
+    .works-item-img{
+        margin: auto -26px;
+    }
+    .works-item-img img{
+        width: 100%;
+    }
+    .works-area .works-item {
+        background: white;
+        padding: 5px 25px;
+    }
+    .works-area .footer{
+        padding-top: 10px;
+        border-top: thin #eee solid;
+    }
+    .works-area .footer .btn{
+        padding: 7px 9px;
+        border-radius: 2px;
+        float: right;
+        margin: 8px 0;
+        text-transform: none;
+        font-size: 12px;
+        font-style: italic;
+        background: #0085a1;
+        border:none;
+        color: #fff;
+    }
+    .works-item .title{
+        padding-top: 6px;
+    }
+    .works-item .title h3{
+        display: inline-block;
+        margin: 0 15px;
+        height: 33px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .works-item .title .title-date{
+        float: right;
+        font-size: 18px;
+    }
+    .works-item .use span{
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 3px;
+        padding: 0 4px;
+        border:thin solid #795548;
+    }
+    .works-item .subtitle{
+        margin:0;
+        font-size: 17px;
+    }
+    @media screen and (max-width:400px){
+        .works-item .footer .use{
+            font-size: 14px;
+        }
+        .works-item .works-item-img{
+            height: 200px;
+        }
+        .bg-header .avatar img{
+            max-width: 150px;
+        }
+        .bg-header h1{
+            font-size: 24px;
+        }
+        section .works-area{
+            margin-top: -210px;
+        }
+    }
+</style>
+
+<!--样式内容-->
+<div class="works-container" style="background-color: #fafafa">
+    <!--个人展示-->
+    <header>
+        <div class="bg-header text-center">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="<%- config["cdn-url"]|| '/img/'%><%= config['sidebar-avatar']%><%- config['cdn-url'] ? config['clip-avatar']:""%>" >
+                </div>
+                <div class="personal-profile">
+                    <h1>
+                        <%= config.author %>
+                    </h1>
+                    <h2>个人作品集</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--作品展示-->
+    <div class="container">
+        <section class="row">
+            <div class="col-sm-10 col-sm-offset-1
+                        col-md-8 col-md-offset-2
+                      works-area">
+                <% for(var obj in site.data.project){ %>
+                <div class="works-item">
+                    <div class="title">
+                        <h3>
+                            <%= site.data.project[obj].title %>
+                        </h3>
+                        <span class="title-date">
+                            <%= site.data.project[obj].data %>
+                        </span>
+                    </div>
+                    <!--　项目ｓｈｏｗ　-->
+                    <div class="works-item-img">
+                        <img src="<%= site.data.project[obj].img_link %>"  >
+                    </div>
+                    <div>　
+                        <p class="subtitle"> <%= site.data.project[obj].subTitle %> </p>
+                         <span class="use">
+                             <% for (var arrayVal in site.data.project[obj].use ){ %>
+                             <span>
+                                    <%= site.data.project[obj].use[arrayVal] %>
+                                </span>
+                             <% } %>
+                         </span>
+                        <p> <%= site.data.project[obj].direction%> </p>
+                    </div>
+                    <div class="footer clearfix">
+                        <a class=" btn btn-default" href="<%= site.data.project[obj].link %>" target="_blank"> Open it</a>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </section>
+    </div>
+</div>

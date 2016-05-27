@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<%- partial('_partial/head') %>
+<style>
+    .intro-header{
+        background-image:url(
+        '<%- config["cdn-url"] || "/img/"%><%= page["header-img"] ||config["header-img"] %><%-
+        config['cdn-url']? config['clip-content']:""%>'
+        )
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+<%- partial('_partial/nav') %>
+    <!-- Main Content -->
+    <%- body %>
+    <!-- Footer -->
+    <%- partial('_partial/footer') %>
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="<%= config['cdn-url'] || '/img/' %><%= config['sidebar-avatar']%><%- config['cdn-url']?config['clip-avatar']:''%>">
+</body>
+
+</html>

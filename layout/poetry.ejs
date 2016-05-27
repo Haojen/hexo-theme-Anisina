@@ -1,0 +1,181 @@
+---
+layout: layout
+---
+<style>
+    .poetry-container{
+        background-color: rgba(255, 248, 220, 0.5);
+        padding-top: 43px;
+        margin-top: -43px;
+        text-align: center;
+    }
+    .poetry-container .poetry-content{
+        writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+        margin:100px auto 0;
+        overflow: auto;
+        max-width: 90%;
+        max-height: 700px;
+        display: inline-block;
+        text-align: left;
+        padding: 5px 15px 30px;
+    }
+    .poetry-head{
+        width: 100%;
+        height: 56px;
+        position: absolute;
+        top:0;left: 0;
+        background-color: black;
+    }
+    .poetry-container .poetry-content h2{
+        color: #fff;
+        font-family: STkaiti;
+        font-size: 34px;
+        text-indent: 65px;
+        float: left;
+        margin-top:0;
+    }
+    .poetry-container .poetry-content h2 span{
+        background-color: black; padding: 2px 1px;
+        border-radius: 3px;
+    }
+
+    .poetry-container .poetry-content p{
+        clear: both;
+        font-size: 24px;
+        font-family: STSong;
+        letter-spacing: 8px;
+        text-shadow: 0 0 1px rgba(15,15,15,.3);
+        text-indent: 63px;
+        line-height: 40px;
+        margin: 0;
+    }
+    /* ipad */
+    @media screen and (max-width: 768px){
+        .poetry-container .poetry-content{
+            max-height: 480px;max-width: 100%;
+            margin: 80px auto 0 ;
+            padding-bottom: 10px;
+        }
+        .poetry-container .poetry-content p {
+            font-size: 16px;
+            text-indent: 46px;
+            line-height: 33px;
+            letter-spacing: 6px;
+            font-family: unset;
+        }
+        .poetry-container .poetry-content h2{
+            margin-right: 6px;
+            font-size: 22px;
+            text-indent: 24px;
+            font-family: unset;
+        }
+        .poetry-container .poetry-content h2 span{
+            padding: 8px 5px;
+        }
+    }
+    /*手机屏幕*/
+    @media screen and (max-width: 400px){
+        .poetry-container .poetry-content{
+            max-height: 410px;
+            padding-bottom: 20px;
+        }
+        .poetry-container .poetry-content p {
+            line-height: 30px;
+            letter-spacing: 3px;
+        }
+
+    }
+
+
+
+
+</style>
+<div class="poetry-container">
+    <!--导航黑色-->
+        <div class="poetry-head"></div>
+    <!--主内容-->
+        <div class="poetry-content">
+            <h2>
+                <span>
+                    <%= page.title %>
+                </span>
+            </h2>
+            <%- page.content %>
+        </div>
+    <!--多说评论-->
+        <div class=" col-lg-6 col-lg-offset-3
+                        col-md-8 col-md-offset-2
+                        col-sm-10 col-sm-offset-1
+                        col-xs-12" >
+            <hr>
+            <% if(config['duoshuo_share'] && config['duoshuo_username']) { %>
+            <!-- 多说 Share start -->
+            <div class="ds-share"
+                 style="text-align: right"
+                 data-thread-key="<%= page.path %>"
+                 data-title="<%= page.title %>"
+                 data-url="<%= page.permalink %>"
+                 data-images="<%= page["header-img"] ? page.permalink + page["header-img"] : '' %>"
+                 data-content="<%- truncate(strip_html(page.content), {length: 50, omission: '...'}) %> | <%= config.SEOTitle %> " >
+                <div class="ds-share-inline">
+                    <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                    </ul>
+                    <div class="ds-share-icons-more">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- 多说 Share end-->
+            <% } %>
+
+            <ul class="pager">
+                <% if (page.prev){ %>
+                <li class="previous">
+                    <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; Previous Post</a>
+                </li>
+                <% } %>
+                <% if (page.next){ %>
+                <li class="next">
+                    <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">Next Post &rarr;</a>
+                </li>
+                <% } %>
+            </ul>
+
+            <% if(config['duoshuo_username']) { %>
+            <!-- 多说评论框 start -->
+            <div class="comment">
+                <div class="ds-thread"
+                     data-thread-key="<%= page.path %>"
+                     data-title="<%= page.title %>"
+                     data-url="<%= page.permalink %>" >
+                </div>
+            </div>
+            <!-- 多说评论框 end -->
+            <% } %>
+        </div>
+
+</div>
+
+<% if(config['duoshuo_username']) { %>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '<%= config['duoshuo_username'] %>';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+<% } %>
