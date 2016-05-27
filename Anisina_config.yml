@@ -1,0 +1,140 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# you need copy this file to your hexo blog root path , rename Anisina_config to _config and replace or modify origin _config.yml
+
+# Site
+title: Anisina
+subtitle:  
+author: Haojen Ma
+language: 
+timezone: 
+
+# custom Site settings
+# more detail check out docs
+SEOTitle: Anisina blog 
+header-img:  # header-img.png 
+email: HaoJenma@gmail.com # your email
+description: "马浩珍在 Github 上的个人博客"
+keyword:  # your keywords
+# custom end
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://ehazon.github.io #your blog url
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# SNS settings
+# RSS:
+#replace yours
+weibo_username: haojen 
+zhihu_username: megahertz
+github_username: ehazon
+twitter_username: ehazon
+facebook_username:  
+linkedin_username:  
+
+# Build settings
+anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
+
+
+# Disqus settings 
+disqus_username: 
+
+# Duoshuo settings
+duoshuo_username: ehazon-github
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id:
+# Google Analytics
+ga_track_id:             # Format: UA-xxxxxx-xx
+ga_domain:
+
+# Sidebar settings
+sidebar-about-description: "Stay Hungry , Stay Foolish"
+sidebar-avatar: avatar_man_2.png    # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/ 
+## Themes: https://hexo.io/themes/
+theme: Anisina
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+# replace  yours
+deploy:
+  type: git
+  repo: https://github.com/ehazon/ehazon.github.io.git
+  branch: master
+
+
+# img CDN path
+cdn-url: 
+
+# Qiniu imageView2 API
+# More info http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html
+clip-content: "?imageView2/1/w/1400/h/400/interlace/1/q/90"
+clip-avatar: "?imageView2/2/w/300/h/300/interlace/1/q/90"
+clip-post: "?" # you can custom post width and height
+clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
+
+# post default images
+post-default-img: your-custom-img.jpg
+
+
