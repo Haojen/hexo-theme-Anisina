@@ -2,7 +2,7 @@
 
 A simple responsive , support qiniu image cdn theme for hexo,
 Ported Theme of Hux Blog and Kaijun Blog.
-[![Anisina](http://o7bkkhiex.bkt.clouddn.com/Anisina.png)](http://ehazon.github.io/)
+[![Anisina](http://o7bkkhiex.bkt.clouddn.com/Anisina.png)](http://haojen.github.io/)
 ## Summary
 	
 - [General](#general)
@@ -34,8 +34,8 @@ Ported Theme of Hux Blog and Kaijun Blog.
 
 1. Init
 
-		git clone https://github.com/ehazon/ehazon.github.io.git
-	
+		git clone https://github.com/Haojen/hexo-theme-Anisina.git
+		
    then copy this folder into your Hexo  **theme** folder
 
 2. Mmodify ```_config.yml```file with your own info. look like this :
