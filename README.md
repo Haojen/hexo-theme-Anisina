@@ -48,11 +48,13 @@ Ported Theme of Hux Blog and Kaijun Blog.
 		
    then copy this folder into your Hexo  **theme** folder
 
-2. Mmodify ```_config.yml```file with your own info. look like this :
+2. Modify ```_config.yml```file with your own info. look like this :
 
 		themes: Anisina
 	
-3. This all , hope you like :)
+3. Or you can copy my theme Anisina `_config.yml` into you hexo blog directory ,  replace default `_config.yml`
+
+4. This all , hope you like :)
 
 
 ## Quick Start
