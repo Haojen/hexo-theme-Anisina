@@ -22,7 +22,7 @@ keyword:  # your keywords
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://ehazon.github.io #your blog url
+url: http://haojen.github.io #your blog url
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -45,7 +45,7 @@ anchorjs: false                        # if you want to customize anchor. check 
 disqus_username: 
 
 # Duoshuo settings
-duoshuo_username: ehazon-github
+duoshuo_username: 
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
@@ -120,7 +120,7 @@ theme: Anisina
 # replace  yours
 deploy:
   type: git
-  repo: https://github.com/ehazon/ehazon.github.io.git
+  repo:   # config yours
   branch: master
 
 
