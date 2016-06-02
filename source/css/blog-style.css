@@ -389,7 +389,7 @@ article blockquote footer{
 .intro-header .site-heading h1,
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+    text-shadow: 0 0 40px black;
 }
 
 .intro-header .site-heading .subheading,
@@ -418,8 +418,8 @@ article blockquote footer{
 .intro-header .post-heading .subheading {
     font-size: 30px;
     line-height: 1.4;
-    /*font-weight: normal;*/
     margin-bottom: 0;
+    text-shadow: 0 0 40px black;
 }
 
 .intro-header .post-heading .meta {
@@ -443,7 +443,7 @@ article blockquote footer{
     }
 
     .intro-header .post-heading .subheading {
-        font-size: 28px;
+        font-size: 26px;
         margin:0;
     }
 

@@ -4,13 +4,13 @@ layout: layout
 
 <!-- Image to hack wechat -->
 <!--only post-->
-<img class="wechat-title-img" src="<%= config['cdn-url']|| '/img/'%><%= page['wechat-share'] || page['header-img'] || config["post-default-img"]%><%- config['cdn-url']? config['clip-content']:''%>">
+<img class="wechat-title-img" src="<%= config['cdn-url']%><%= page['wechat-share'] || page['header-img'] || config["post-default-img"]%><%- config['cdn-url']? config['clip-content']:''%>">
 
 <!-- Post Header -->
 <!-- only post bg-->
 <style type="text/css">
     header.intro-header{
-        background-image: url('<%= config["cdn-url"] || "/img/"%><%= page["header-img"]|| config["post-default-img"] %><%- config["cdn-url"]?config["clip-content"]: ""%>')
+        background-image: url('<%= config["cdn-url"]%><%= page["header-img"]|| config["post-default-img"] %><%- config["cdn-url"]?config["clip-content"]: ""%>')
     }
 </style>
 

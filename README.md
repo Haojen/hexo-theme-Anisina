@@ -2,7 +2,17 @@
 
 A simple responsive , support qiniu image cdn theme for hexo,
 Ported Theme of Hux Blog and Kaijun Blog.
-[![Anisina](http://o7bkkhiex.bkt.clouddn.com/Anisina.png)](http://haojen.github.io/)
+[![Anisina](http://o7bkkhiex.bkt.clouddn.com/Anisina.png)]
+(http://haojen.github.io/)
+
+## New
+
+### Anisina v1.02 (2016-06-02)
+- bug fix
+- adjust post title text shadow
+- change header img path , now you can use `http://somepath.png`,or use hexo default `img`path: `img/demo.png`
+- adjust post subtitle font size
+
 ## Summary
 	
 - [General](#general)
@@ -15,7 +25,7 @@ Ported Theme of Hux Blog and Kaijun Blog.
 ## General
 
 - **Author** : Haojen Ma
-- **Version** : 1.0
+- **Version** : 1.0.2
 - **Compatibility** : Hexo 3 or later
 
 ## Features

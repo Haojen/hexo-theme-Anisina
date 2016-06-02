@@ -26,12 +26,14 @@ layout: layout
         .custom-haojen-container .post-preview:nth-child(1) h2,
         .custom-haojen-container .post-preview:nth-child(1) .post-meta,
         .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            text-shadow: 0 0 2px rgba(0, 0, 0, .15);
+            text-shadow: 0 0 40px rgba(0, 0, 0, 1);
             letter-spacing: 1px;
             color: #fff;
             font-family: unset;
             font-weight: 500;
             margin-top: 0;
+            padding-left: 60px;
+            padding-right: 60px;
         }
 
         .custom-haojen-container .post-preview:nth-child(1) .post-meta{
@@ -81,6 +83,7 @@ layout: layout
             .custom-haojen-container .post-preview:nth-child(1) .post-subtitle{
                 font-size: 18px;
                 font-weight:400;
+                padding-left: 0;padding-right: 0;
             }
             .custom-haojen-container .post-preview:nth-of-type(1) > a{padding: 20px}
         }
@@ -110,7 +113,7 @@ layout: layout
                 <div class="site-heading text-center">
                     <div class="about-me">
                         <!--移动端头部显示-->
-                        <img src="<%- config['cdn-url'] || '/img/'%><%= config['sidebar-avatar']%><%- config['cdn-url']?config['clip-avatar']:''%>" />
+                        <img src="<%- config['cdn-url']%><%= config['sidebar-avatar']%><%- config['cdn-url']?config['clip-avatar']:''%>" />
                         <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
                         <p><%= config['sidebar-about-description'] %></p>
                     </div>
@@ -140,7 +143,7 @@ layout: layout
                     <div class="short-about">
                         <!--侧边栏头像-->
                         <% if(config['sidebar-avatar']) { %>
-                            <img src="<%- config['cdn-url'] || '/img/'%><%= config['sidebar-avatar'] %><%- config['cdn-url'] ? config['clip-avatar']:''%> " />
+                            <img src="<%- config['cdn-url']%><%= config['sidebar-avatar'] %><%- config['cdn-url'] ? config['clip-avatar']:''%> " />
                         <% } %>
                         <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
                         <% if(config['sidebar-about-description']) { %>
