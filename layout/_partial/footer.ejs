@@ -81,13 +81,13 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; <%= config.title %> <%= new Date().getFullYear() %> 
+                    Copyright &copy; <%= config.title %> <%= new Date().getFullYear() %>
                     <br>
                     <!--Theme by <a href="https://github.com/Kaijun/">Kaijun</a>-->
                     <!--<span style="display: inline-block; margin: 0 5px;">-->
                         <!--<i class="fa fa-heart"></i>-->
                     <!--</span> -->
-                    Theme by <a href="http://haojen.github.io/">Haojen Ma</a>
+                    Theme by <a href="http://ehazon.github.io/">Haojen Ma</a>
                     <!--<iframe-->
                         <!--style="margin-left: 2px; margin-bottom:-5px;"-->
                         <!--frameborder="0" scrolling="0" width="91px" height="20px"-->
@@ -180,3 +180,18 @@
 
 <!-- Side Catalog -->
 
+
+<!-- totop start -->
+<%- partial('_partial/totop') %>
+<%- js('js/totop.js') %>
+<!-- totop end -->
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','<%= config.swiftype_key%>','2.0.0');
+</script>
