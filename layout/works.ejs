@@ -65,6 +65,7 @@ layout: layout
         border:none;
         color: #fff;
     }
+    .works-item .works-content{padding-top: 15px;}
     .works-item .title{
         padding-top: 6px;
     }
@@ -139,7 +140,7 @@ layout: layout
                         <h3>
                             <%= site.data.project[obj].title %>
                         </h3>
-                        <span class="title-date">
+                        <span class="title-date text-muted">
                             <%= site.data.project[obj].data %>
                         </span>
                     </div>
@@ -147,16 +148,17 @@ layout: layout
                     <div class="works-item-img">
                         <img src="<%= site.data.project[obj].img_link %>"  >
                     </div>
-                    <div>　
-                        <p class="subtitle"> <%= site.data.project[obj].subTitle %> </p>
-                         <span class="use">
-                             <% for (var arrayVal in site.data.project[obj].use ){ %>
-                             <span>
+                    <div class="works-content">
+                        <div class="use text-warning">
+                            <% for (var arrayVal in site.data.project[obj].use ){ %>
+                            <span>
                                     <%= site.data.project[obj].use[arrayVal] %>
                                 </span>
-                             <% } %>
-                         </span>
-                        <p> <%= site.data.project[obj].direction%> </p>
+                            <% } %>
+                        </div>　
+                        <p class="subtitle"> <%= site.data.project[obj].subTitle %> </p>
+
+                        <p class="text-muted"> <%- site.data.project[obj].direction%> </p>
                     </div>
                     <div class="footer clearfix">
                         <a class=" btn btn-default" href="<%= site.data.project[obj].link %>" target="_blank"> Open it</a>
