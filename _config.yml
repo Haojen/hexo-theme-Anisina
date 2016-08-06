@@ -6,15 +6,15 @@
 
 # Site
 title: Anisina
-subtitle:
+subtitle:  
 author: Haojen Ma
-language:
-timezone:
+language: 
+timezone: 
 
 # custom Site settings
 # more detail check out docs
-SEOTitle: Anisina blog
-header-img:  # header-img.png
+SEOTitle: Anisina blog 
+header-img:  # header-img.png 
 email: HaoJenma@gmail.com # your email
 description: "马浩珍在 Github 上的个人博客"
 keyword:  # your keywords
@@ -30,22 +30,22 @@ permalink_defaults:
 # SNS settings
 # RSS:
 #replace yours
-weibo_username: haojen
+weibo_username: haojen 
 zhihu_username: megahertz
 github_username: ehazon
 twitter_username: ehazon
-facebook_username:
-linkedin_username:
+facebook_username:  
+linkedin_username:  
 
 # Build settings
 anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
 
 
-# Disqus settings
-disqus_username:
+# Disqus settings 
+disqus_username: 
 
 # Duoshuo settings
-duoshuo_username:
+duoshuo_username: 
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
@@ -111,7 +111,7 @@ per_page: 8
 pagination_dir: page
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
+## Plugins: https://hexo.io/plugins/ 
 ## Themes: https://hexo.io/themes/
 theme: Anisina
 
@@ -125,7 +125,7 @@ deploy:
 
 
 # img CDN path
-cdn-url:
+cdn-url: 
 
 # Qiniu imageView2 API
 # More info http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html
@@ -137,5 +137,4 @@ clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 # post default images
 post-default-img: your-custom-img.jpg
 
-# Swiftype Search API Key
-swiftype_key: 
+
