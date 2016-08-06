@@ -83,17 +83,12 @@
                 <p class="copyright text-muted">
                     Copyright &copy; <%= config.title %> <%= new Date().getFullYear() %>
                     <br>
-                    <!--Theme by <a href="https://github.com/Kaijun/">Kaijun</a>-->
-                    <!--<span style="display: inline-block; margin: 0 5px;">-->
-                        <!--<i class="fa fa-heart"></i>-->
-                    <!--</span> -->
-                    Theme by <a href="http://ehazon.github.io/">Haojen Ma</a>
-                    <!--<iframe-->
-                        <!--style="margin-left: 2px; margin-bottom:-5px;"-->
-                        <!--frameborder="0" scrolling="0" width="91px" height="20px"-->
-                        <!--src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >-->
-                    <!--</iframe>-->
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+
                 </p>
+
             </div>
         </div>
     </div>
@@ -121,7 +116,6 @@
     }
 </script>
 
-
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
@@ -144,7 +138,6 @@
     })
 </script>
 
-
 <!-- Google Analytics -->
 
 <% if (config.ga_track_id) { %>
@@ -162,7 +155,6 @@
 </script>
 <% } %>
 
-
 <!-- Baidu Tongji -->
 <% if (config.ba_track_id) { %>
 <script>
@@ -178,9 +170,6 @@
 </script>
 <% } %>
 
-<!-- Side Catalog -->
-
-
 <!-- totop start -->
 <%- partial('_partial/totop') %>
 <%- js('js/totop.js') %>
@@ -195,3 +184,5 @@
 
   _st('install','<%= config.swiftype_key%>','2.0.0');
 </script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>

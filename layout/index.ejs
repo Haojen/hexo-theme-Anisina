@@ -3,12 +3,11 @@ layout: page
 ---
 <!-- Main Content -->
 
-
 <% page.posts.each(function(post){ %>
-
-<div class="post-preview <%- post.layout === 'poetry'? 'post-preview-poetry':''%>"
-        style="background-image: url('<%- config["cdn-url"]%><%- post["header-img"] || config["post-default-img"] %><%- config["cdn-url"]?config["clip-home-post-bg"]:"" %>')">
-        <a href="<%- config.root %><%- post.path %>">
+    <% if (post["cdn"] === 'header-off') { %>
+        <div class="post-preview <%- post.layout === 'poetry'? 'post-preview-poetry':''%>"
+     style="background-image: url('<%- post["header-img"] || config["post-default-img"] %>')">
+    <a href="<%- config.root %><%- post.path %>">
         <h2 class="post-title">
             <%- post.title || "未命名" %>
         </h2>
@@ -16,9 +15,9 @@ layout: page
             <%= post.date.format(config.date_format) %>
         </p>
         <% if (post.subtitle && post.subtitle.length) { %>
-            <h3 class="post-subtitle">
-                <%- post.subtitle %>
-            </h3>
+        <h3 class="post-subtitle">
+            <%- post.subtitle %>
+        </h3>
         <% } %>
         <div class="post-content-preview">
             <p>
@@ -28,7 +27,31 @@ layout: page
     </a>
 
 </div>
+    <% } else {%>
+        <div class="post-preview <%- post.layout === 'poetry'? 'post-preview-poetry':''%>" style="background-image: url('<%- post["header-img"]? config["cdn-url"]+post["header-img"] : config["post-default-img-mobile"]%>')">
+    <a href="<%- config.root %><%- post.path %>">
+        <h2 class="post-title">
+            <%- post.title || "未命名" %>
+        </h2>
+        <p class="post-meta">
+            <%= post.date.format(config.date_format) %>
+        </p>
+        <% if (post.subtitle && post.subtitle.length) { %>
+        <h3 class="post-subtitle">
+            <%- post.subtitle %>
+        </h3>
+        <% } %>
+        <div class="post-content-preview">
+            <p>
+                <%- truncate(strip_html(post.content), {length: 150, omission: '...'})%>
+            </p>
+        </div>
+    </a>
+
+</div>
+<% } %>
 <hr>
+
 <% }); %>
 
 

@@ -4,14 +4,21 @@ layout: layout
 
 <!-- Image to hack wechat -->
 <!--only post-->
-<img class="wechat-title-img" src="<%- config['cdn-url']%><%= page['wechat-share'] || page['header-img'] || config["post-default-img"]%><%- config['cdn-url']? config['clip-content']:''%>">
+<% if (page['wechat-share']) {%>
+    <!--只支持CDN图床-->
+    <img class="wechat-title-img" src="<%- config['cdn-url']%><%= page['wechat-share'] || page['header-img'] %><%- config['cdn-url']? config['clip-content']:''%>">
+<% } else{ %>
+    <% if (page["cdn"] === 'header-off'){ %>
+        <img class="wechat-title-img" src="<%= page["header-img"] || config["post-default-img"]%>">
+    <% } else {%>
+        <img class="wechat-title-img" src="<%- page['header-img']?config['cdn-url']+page["header-img"] : config["post-default-img"]%>">
+    <% } %>
+<% } %>
 
 <!-- Post Header -->
 <!-- only post bg-->
 <style type="text/css">
-    header.intro-header{
-        background-image: url('<%- config["cdn-url"]%><%= page["header-img"]|| config["post-default-img"] %><%- config["cdn-url"]?config["clip-content"]: ""%>')
-    }
+
 </style>
 
 <header class="intro-header" >

@@ -22,7 +22,7 @@ keyword:  # your keywords
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://haojen.github.io #your blog url
+url: https://haojen.github.io #your blog url
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

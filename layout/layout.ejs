@@ -4,12 +4,15 @@
 <!-- Head tag -->
 <%- partial('_partial/head') %>
 <style>
-    .intro-header{
-        background-image:url(
-        '<%- config["cdn-url"]%><%= page["header-img"] ||config["header-img"] %><%-
-        config['cdn-url']? config['clip-content']:""%>'
-        )
+    <% if (page["cdn"] === 'header-off'){%>
+    header.intro-header{
+        background-image: url('<%= page["header-img"] || config["post-default-img"]%>') ;
     }
+    <%} else {%>
+    header.intro-header{
+        background-image: url('<%- page["header-img"]?config["cdn-url"]+page["header-img"]+config["clip-content"] : config["post-default-img"]%>')
+    }
+    <% } %>
 </style>
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
@@ -19,7 +22,7 @@
     <!-- Footer -->
     <%- partial('_partial/footer') %>
     <!--wechat title img-->
-    <img class="wechat-title-img" src="<%- config['cdn-url']%><%= config['sidebar-avatar']%><%- config['cdn-url']?config['clip-avatar']:''%>">
+    <img class="wechat-title-img" src="<%= config['sidebar-avatar']%>">
 </body>
 
 </html>
