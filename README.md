@@ -1,11 +1,38 @@
 # Anisina
 
+<a href="http://haojen.github.io/2016/08/06/Anisina-%E4%B8%AD%E6%96%87%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">点击查看中文使用教程</a>
+
 A simple responsive , support qiniu image cdn theme for hexo,
 Ported Theme of Hux Blog and Kaijun Blog.
 [![Anisina](http://o7bkkhiex.bkt.clouddn.com/Anisina.png)]
 (http://haojen.github.io/)
 
 ## New
+
+### Anisina v2.01 （2016-08-07）
+
+- Support Double Click Navbar Scroll To Page Top
+- Support Swiftfy Search
+- Support Friends Links
+- Support Single Post Switch CDN Images ToTother Links
+- Support Safari & Chrome Color Header Bar
+- Support Preview Statistical
+- Bug Fix
+
+#### Adjust
+
+1. wechat title will auto use header images
+2. home post margin adjust
+3. home post title font style adjust
+4. avatar path use absolute url
+
+#### thanks
+thanks @HipHopCoderS PR :) and all users
+
+##### Known issues
+
+1. in wechat web view double click navbar can't scroll top
+
 
 ### Anisina v1.02 (2016-06-02)
 - bug fix
@@ -25,20 +52,22 @@ Ported Theme of Hux Blog and Kaijun Blog.
 ## General
 
 - **Author** : Haojen Ma
-- **Version** : 1.0.2
+- **Version** : 2.0.0
 - **Compatibility** : Hexo 3 or later
 
 ## Features
 
 - Fully responsive
 - Support Qiniu images CDN 
-- Custom  wechat title images
 - Support Toc
 - Duoshuo
 - Disqus
 - Googe analytics
 - Baidu analytics
 - SEO
+- Immersive status bar
+- Search
+- Preivew Statistical
 
 ### Install
 
@@ -95,8 +124,6 @@ Support qiniu images cdn or you custom others, before use this, you need set you
 
 3. in post **front-matter** set your images name
 
-		 wechat-share: icon-wechat.png
-		 #or
 		 header-img: some-images.png
 	
 in browser,  img src or background-url  will be look like ```http://you-cdn.com/icon-wechat.png``` or ```http://you-cdn.com/header-img```, etc.
@@ -163,7 +190,7 @@ The **front-matter** of a post looks like that:
 	date: 2016-05-26 06:00
 	author: "Haojen Ma"
 	header-img: "img/post-default.jpg"
-	wechat-share: "icon_wechat.jpg"
+	cdn: 'header-on'
 	tags:
 		- Movies
 		- Life
@@ -192,6 +219,17 @@ if you don't have set ,this will use post default header images.
 #### Custom wechat title images
 
 	wechat-share: "icon_wechat.jpg"
+	
+#### cdn (V2.0 New Feature)
+
+use cdn tag switch single post cdn ,like this:
+
+	cdn: 'header-off' 
+	header-img: "http://www.imagestest.com/god.png"
+	
+this will turn off cdn , and use your custom url
+
+	
 	
 when your share post to wechat moments , this post images will show here,
 if you don't have set ,this will use post header images.
