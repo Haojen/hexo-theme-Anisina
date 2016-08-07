@@ -84,8 +84,17 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight){
         scrollCheck(toc,'toc-fixed',introHeader-60);
         scrollCheck(navbar,'is-fixed');
         scrollCheck(postTitle,'post-title-fixed',introHeader-60);
-    }else {
     }
 })();
+
+(function () {
+    var navTop = document.querySelector('#nav-top');
+    navTop.ondblclick = function () {
+        $('body').animate({
+            scrollTop: 0
+        }, 500)
+    }
+})();
+
 
 

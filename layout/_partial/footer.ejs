@@ -2,7 +2,9 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <span class="text-muted"style="font-size: 14px">双击导航条返回顶部</span>
+                <br>
                 <ul class="list-inline text-center">
                 <% if (config.RSS) { %>
                     <li>
@@ -86,7 +88,6 @@
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
                     Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
-
                 </p>
 
             </div>
@@ -169,11 +170,6 @@
     })();
 </script>
 <% } %>
-
-<!-- totop start -->
-<%- partial('_partial/totop') %>
-<%- js('js/totop.js') %>
-<!-- totop end -->
 
 <!-- swiftype -->
 <script type="text/javascript">
