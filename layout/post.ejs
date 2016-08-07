@@ -14,11 +14,16 @@ layout: layout
         <img class="wechat-title-img" src="<%- page['header-img']?config['cdn-url']+page["header-img"] : config["post-default-img"]%>">
     <% } %>
 <% } %>
-
-<!-- Post Header -->
-<!-- only post bg-->
-<style type="text/css">
-
+<style>
+<% if (page["cdn"] === 'header-off'){%>
+    header.intro-header{
+        background-image: url('<%= page["header-img"] || config["post-default-img"]%>') ;
+    }
+<%} else {%>
+    header.intro-header{
+        background-image: url('<%- page["header-img"]?config["cdn-url"]+page["header-img"]+config["clip-content"] : config["post-default-img"]%>')
+    }
+<% } %>
 </style>
 
 <header class="intro-header" >
@@ -155,8 +160,8 @@ layout: layout
                 <!-- Friends Blog -->
                 <% if(config.friends) { %>
                 <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
+                <h5 class="text-center">FRIENDS</h5>
+                <ul class="list-inline text-center">
 
                     <% config.friends.forEach(function(friend){ %>
                         <li><a href="<%= friend.href %>"><%= friend.title %></a></li>

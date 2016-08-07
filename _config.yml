@@ -14,7 +14,7 @@ timezone:
 # custom Site settings
 # more detail check out docs
 SEOTitle: Anisina blog 
-header-img:  # header-img.png 
+header-img:  http://o7bkkhiex.bkt.clouddn.com/anisina-pink-bg.jpg
 email: HaoJenma@gmail.com # your email
 description: "马浩珍在 Github 上的个人博客"
 keyword:  # your keywords
