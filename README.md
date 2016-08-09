@@ -4,7 +4,8 @@
 
 A simple responsive , support qiniu image cdn theme for hexo,
 Ported Theme of Hux Blog and Kaijun Blog.
-[Anisina](http://o7bkkhiex.bkt.clouddn.com/Anisina.png)
+
+<img src="http://o7bkkhiex.bkt.clouddn.com/Anisina.png" />
 
 ## New
 
