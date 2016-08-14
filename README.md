@@ -31,7 +31,7 @@ thanks @HipHopCoderS PR :) and all users
 
 ##### Known issues
 
-1. in wechat web view double click navbar can't scroll top
+1. in wechat web view double click navbar can't scroll top ( cause wechat have doubleclick nav title return page top function )
 
 
 ### Anisina v1.02 (2016-06-02)
@@ -208,7 +208,7 @@ if your like chinese poetry , you can try  ```poetry``` layout ,they will be coo
 	
  A poetry demo
  
-![poetry-demo](http://o7bkkhiex.bkt.clouddn.com/poetry-show.png)
+![poetry-demo](./poetry-show.png)
 
 #### Header-img
 
@@ -243,12 +243,4 @@ and also you can help me fix bugs and add new feature :)
 
 ## License
 Apache License Version 2.0
-	
-
-
-
-
-
-
-
 	
