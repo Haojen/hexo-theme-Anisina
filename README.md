@@ -208,7 +208,7 @@ if your like chinese poetry , you can try  ```poetry``` layout ,they will be coo
 	
  A poetry demo
  
-![poetry-demo](http://o7bkkhiex.bkt.clouddn.com/poetry-show.png)
+![poetry-demo](./poetry-show.png)
 
 #### Header-img
 
