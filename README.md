@@ -7,6 +7,13 @@ Ported Theme of Hux Blog and Kaijun Blog.
 
 <img src="./Screenshots/Anisina.png" />
 
+## Next Version Think About :triangular_flag_on_post:
+
+- Add Custom Favicon Function ( thanks @thankuu advice :blush: )
+- More Animation 
+- Bug fix
+- And If You Have any Best Idea , Please Contact To me , My Email haojen.ma@gmail.com , Or Create A Issue :smile:
+
 ## New
 
 ### Anisina v2.01 （2016-08-07）
@@ -27,6 +34,8 @@ Ported Theme of Hux Blog and Kaijun Blog.
 4. avatar path use absolute url
 
 #### thanks
+
+thanks @刘晓婉 PR 
 thanks @HipHopCoderS PR :) and all users
 
 ##### Known issues
@@ -52,7 +61,7 @@ thanks @HipHopCoderS PR :) and all users
 ## General
 
 - **Author** : Haojen Ma
-- **Version** : 2.0.0
+- **Version** : 2.0
 - **Compatibility** : Hexo 3 or later
 
 ## Features
@@ -111,6 +120,25 @@ You can easily get stared by modifying ```config.yml```
 
 	#post default images
 	post-default-img: post-default.jpg
+	
+	# friends
+	friends: [
+		{
+			title: "your friend title",
+			href: "your fiend path"
+		},
+		{
+			title: "your friend title 2",
+			href: "your friend path 2"
+		}
+	] 
+	
+#### Create Tag page
+
+1. use hexo command `hexo new page "Tags"`
+2. then open `yourblog/source` folder , find `Tags/index.md`, set `layout: tags`
+3. after use hexo cammand reset hexo `hexo clean && hexo g` , all done : )
+
 
 #### 	cdn-url
 
@@ -215,10 +243,6 @@ if your like chinese poetry , you can try  ```poetry``` layout ,they will be coo
 post header images.
 if you don't have set ,this will use post default header images.
 
-
-#### Custom wechat title images
-
-	wechat-share: "icon_wechat.jpg"
 	
 #### cdn (V2.0 New Feature)
 
@@ -228,11 +252,9 @@ use cdn tag switch single post cdn ,like this:
 	header-img: "http://www.imagestest.com/god.png"
 	
 this will turn off cdn , and use your custom url
-
-	
 	
 when your share post to wechat moments , this post images will show here,
-if you don't have set ,this will use post header images.
+if you don't have set ,this will use post header images(make sure you have set a default image )
 
 ## About
 
