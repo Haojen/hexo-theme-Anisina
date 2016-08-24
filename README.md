@@ -207,6 +207,22 @@ Mini-About-Me module display all your SNS buttons also your avatar and the descr
 
 It is really nice-looking and well-designed. It would be hidden in a small screen seeing the sidebar would be push to bottom and there is already a footer including SNS feature which is similar.
 
+#### RSS
+
+You can install plugin 'hexo-generator-feed' execute following command:
+	npm install hexo-generator-feed --save
+if you have already install it, Once you generate static page, atom.xml can auto generation.
+
+
+then you add your configuration in _config_yml like this:
+	plugins: 
+		hexo-generator-feed	#RSS订阅插件
+	links: #添加链接信息
+		Feed: atom.xml
+
+if you want to add label RSS in SNS,you also can append configuration like the belowing behind the 'SNS settings':
+	RSS: true
+
 ### Post
 
 The **front-matter** of a post looks like that:
