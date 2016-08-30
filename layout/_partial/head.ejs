@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#60090">
     <link rel="shortcut icon" href="<%= config.root %>img/coffee.png">
     <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="/atom.xml">
-
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         <% if (page.title) { %>
           <%= page.title + '｜' + config.SEOTitle %>
@@ -30,17 +30,12 @@
     <!-- Pygments Github CSS -->
     <%- css('css/syntax') %>
 
-    <!-- Custom Fonts -->
-    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- ga & ba script hoook -->
-    <script></script>
+    <%- js('js/emoji.js') %>
 </head>

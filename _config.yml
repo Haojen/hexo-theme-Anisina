@@ -12,7 +12,7 @@ timezone:
 # custom Site settings
 # more detail check out docs
 SEOTitle: Haojen's blog 
-header-img: http://o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg
+header-img: //o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg
 email: HaojenMa@gmail.com
 description: "马浩珍在 Github 上的个人博客"
 keyword: # seo key words
@@ -112,6 +112,16 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+
+markdown:
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji
+
 ## Themes: https://hexo.io/themes/
 theme: Anisina
 

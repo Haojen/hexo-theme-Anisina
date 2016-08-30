@@ -5,6 +5,7 @@
     }
 }
 
+
 hr{
     margin:0;
 }
@@ -64,7 +65,7 @@ body {
     font-size: 16px;
     color: #404040;
     overflow-x: hidden;
-    font-family: -apple-system, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-family: -apple-system,  "PingFang SC","Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 
 p {
@@ -78,7 +79,6 @@ h4,
 h5,
 h6{
     font-weight: 400;
-    text-transform: capitalize;
 }
 h2{font-size: 22px}
 h3{font-size: 20px}
@@ -105,9 +105,9 @@ a img:focus {
 
 blockquote {
     color: #808080;
-    font-style: italic;
     font-size: 0.95em;
     margin: 20px 0 20px;
+    border-color: #ff7e79;
 }
 
 blockquote p {
@@ -167,7 +167,6 @@ pre code {
 }
 
 
-/*点击博文内部的目录时,跳转到指定标题*/
 article .post-container h1,
 article .post-container h2,
 article .post-container h3,
@@ -404,7 +403,7 @@ article blockquote footer{
     margin: 10px 0 0;
 }
 
-/*导航内部标题居中*/
+/*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨ÃƒÆ’Ã¢â‚¬Â¹ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂªÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­*/
 .intro-header .display-mid{
     display: table-cell;
     vertical-align: middle;
@@ -472,7 +471,7 @@ article blockquote footer{
 a:focus {
     outline: none;
 }
-.post-preview > a > h2{    transition: color .3s;  }
+.post-preview > a > h2{transition: color .3s;}
 .post-preview:not(:first-of-type) > a:hover > h2{
     color: #FC7097;
 }
@@ -489,7 +488,7 @@ a:focus {
     line-height: 1.3;
     margin: 0;
     margin-bottom: 10px;
-    color: rgba(0, 0, 0, .6);
+    color: #555;
     font-weight: 400;
 }
 .post-preview .post-meta {
@@ -522,7 +521,7 @@ a:focus {
 }
 
 .post-content-preview p {
-    color: #757575;
+    color: #555;
 }
 
 .section-heading {
@@ -839,7 +838,6 @@ img::-moz-selection {
 
 .one-tag-list .post-preview > a .post-title {
     font-size: 16px;
-    font-weight: 500;
     margin-top: 20px;
 }
 
@@ -1034,9 +1032,8 @@ img::-moz-selection {
     margin-top: 30px;
     list-style: none;
     color: darkgrey;
-    border-left: #eee 4px solid;
+    border-left: #eee 3px solid;
     padding-left: 12px;
-    text-transform: capitalize;
 }
 
 .container .toc-wrap > ol {
@@ -1045,7 +1042,7 @@ img::-moz-selection {
 }
 
 .container .toc-wrap li > ol {
-    padding-left: 15px;
+    padding-left: 8px;
     list-style: none;
 }
 
@@ -1055,17 +1052,19 @@ img::-moz-selection {
 }
 
 .container .toc-wrap li ol a {
-    color: darkgrey;
+    color: #555;
     font-size: .85em;
-
+    padding-left: 5px;
 }
 
 .container .toc-wrap.toc-fixed {
     position: fixed;
     top: 85px;
     margin-top: 0;
-    overflow: auto;
     max-height: 81%;
+    overflow: auto;
+    z-index:1;
+    background-color: #fff;
 }
 
 .navbar-custom.is-fixed {
@@ -1166,7 +1165,7 @@ img::-moz-selection {
 .site-heading .about-me img{
     width: 120px;height: 120px;
     border-radius: 50%;
-    /*头像半透明效果*/
+    /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ*/
     opacity: .9;
 }
 .site-heading h5 a{
@@ -1188,7 +1187,7 @@ img::-moz-selection {
         padding-top: 90px;
     }
 }
-/*wechat 标题图片优化*/
+/*wechat ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂºÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ÃƒÆ’Ã¢â‚¬Â¹Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ*/
 .wechat-title-img{
     position: absolute;
     height:0;

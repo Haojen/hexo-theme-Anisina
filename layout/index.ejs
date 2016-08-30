@@ -12,7 +12,7 @@ layout: page
             <%- post.title || "未命名" %>
         </h2>
         <p class="post-meta">
-            <%= post.date.format(config.date_format) %>
+            <i class="fa fa-calendar" aria-hidden="true"></i> <%= post.date.format(config.date_format) %>
         </p>
         <% if (post.subtitle && post.subtitle.length) { %>
         <h3 class="post-subtitle">
@@ -34,7 +34,7 @@ layout: page
             <%- post.title || "未命名" %>
         </h2>
         <p class="post-meta">
-            <%= post.date.format(config.date_format) %>
+            <i class="fa fa-calendar" aria-hidden="true"></i> <%= post.date.format(config.date_format) %>
         </p>
         <% if (post.subtitle && post.subtitle.length) { %>
         <h3 class="post-subtitle">
