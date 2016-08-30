@@ -4,7 +4,7 @@ layout: layout
 
 <!--only post-->
 <% if (page['wechat-share']) { %>
-<!--只支持CDN图床-->
+
 <img class="wechat-title-img"
      src="<%- config['cdn-url'] %> <%= page['wechat-share'] || page['header-img'] %> <%- config['cdn-url'] ? config['clip-content'] : '' %>">
 <% } else{ %>

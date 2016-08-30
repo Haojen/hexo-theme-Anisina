@@ -3,23 +3,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<%= config.description %>">
-    <meta name="keyword"  content="<%= config.keyword %>">
+    <meta name="keyword" content="<%= config.keyword %>">
     <meta name="theme-color" content="#600090">
     <meta name="msapplication-navbutton-color" content="#600090">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#60090">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
     <link rel="shortcut icon" href="<%= config.favicon %>">
     <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="/atom.xml">
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         <% if (page.title) { %>
-          <%= page.title + '｜' + config.SEOTitle %>
-        <% } else{%>
-          <%= config.SEOTitle %>
+        <%= page.title + '｜' + config.SEOTitle %>
+        <% } else{ %>
+        <%= config.SEOTitle %>
         <% } %>
     </title>
 
-    <link rel="canonical" href="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>">
+    <link rel="canonical" href="<%= config.url + config.root + (page.path || '').replace('index.html', '') %>">
 
     <!-- Bootstrap Core CSS -->
     <%- css('css/bootstrap.min.css') %>
@@ -29,13 +29,4 @@
 
     <!-- Pygments Github CSS -->
     <%- css('css/syntax') %>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <%- js('js/emoji.js') %>
 </head>
