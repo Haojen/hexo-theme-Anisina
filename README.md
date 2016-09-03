@@ -1,9 +1,6 @@
 # Anisina
 
-<a href="http://haojen.github.io/2016/08/06/Anisina-%E4%B8%AD%E6%96%87%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="background:green; color: #fff; 	text-decoration: none;
-	border-radius: 4px;
-	padding: 5px;
-">点击查看中文使用教程</a>
+<a href="http://haojen.github.io/2016/08/06/Anisina-%E4%B8%AD%E6%96%87%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">点击查看中文使用教程</a>
 
 > simple / grace / small
 
@@ -22,7 +19,7 @@
 
 - Fix Index Pages Http Security Tips
 - Add More Animation
-- Support Web Emoji , here if [use guide](http://haojen.github.io/2016/09/03/Emoji-Demo/) , is very simple.
+- Support Web Emoji , here is [use guide](http://haojen.github.io/2016/09/03/Emoji-Demo/) , is very simple.
 - Support Favicon , you can in `_config.yml` add `favicon: yourImagesPath.png`
 - Font Style Adjust
 - Post page Toc Adjust
