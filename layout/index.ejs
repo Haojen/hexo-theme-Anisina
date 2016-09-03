@@ -5,9 +5,9 @@ layout: page
 
 <% page.posts.each(function(post){ %>
 <% if (post["cdn"] === 'header-off') { %>
-<div class="post-preview <%- post.layout === 'poetry' ? 'post-preview-poetry' : '' %>"
+<div class="post-preview<%- post.layout === 'poetry' ? 'post-preview-poetry' : '' %>"
      style="background-image: url('<%- post["header-img"] || config["post-default-img"] %>')">
-    <a href="<%- config.root %> <%- post.path %>">
+    <a href="<%- config.root %><%- post.path %>">
         <h2 class="post-title">
             <%- post.title || "未命名" %>
         </h2>
@@ -28,9 +28,9 @@ layout: page
 
 </div>
 <% } else { %>
-<div class="post-preview <%- post.layout === 'poetry' ? 'post-preview-poetry' : '' %>"
+<div class="post-preview<%- post.layout === 'poetry' ? 'post-preview-poetry' : '' %>"
      style="background-image: url('<%- post["header-img"] ? config["cdn-url"] + post["header-img"] : config["post-default-img-mobile"] %>')">
-    <a href="<%- config.root %> <%- post.path %>">
+    <a href="<%- config.root %><%- post.path %>">
         <h2 class="post-title">
             <%- post.title || "未命名" %>
         </h2>
@@ -61,12 +61,12 @@ layout: page
 <ul class="pager">
     <% if (page.prev){ %>
     <li class="previous">
-        <a href="<%- config.root %> <%- page.prev_link %>">&larr; Newer Posts</a>
+        <a href="<%- config.root %><%- page.prev_link %>">&larr; Newer Posts</a>
     </li>
     <% } %>
     <% if (page.next){ %>
     <li class="next">
-        <a href="<%- config.root %> <%- page.next_link %>">Older Posts &rarr;</a>
+        <a href="<%- config.root %><%- page.next_link %>">Older Posts &rarr;</a>
     </li>
     <% } %>
 </ul>
