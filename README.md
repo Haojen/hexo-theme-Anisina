@@ -1,20 +1,32 @@
 # Anisina
 
-<a href="http://haojen.github.io/2016/08/06/Anisina-%E4%B8%AD%E6%96%87%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">点击查看中文使用教程</a>
+<a href="http://haojen.github.io/2016/08/06/Anisina-%E4%B8%AD%E6%96%87%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="background:green; color: #fff; 	text-decoration: none;
+	border-radius: 4px;
+	padding: 5px;
+">点击查看中文使用教程</a>
 
-A simple responsive , support qiniu image cdn theme for hexo,
-Ported Theme of Hux Blog and Kaijun Blog.
+> simple / grace / small
 
 <img src="./Screenshots/Anisina.png" />
-
+<!--
 ## Next Version Think About :triangular_flag_on_post:
 
 - Add Custom Favicon Function ( thanks @thankuu advice :blush: )
 - More Animation 
 - Bug fix
-- And If You Have any Best Idea , Please Contact To me , My Email haojen.ma@gmail.com , Or Create A Issue :smile:
+- And If You Have any Best Idea , Please Contact To me , My Email haojen.ma@gmail.com , Or Create A Issue :smile:-->
 
-## New
+## Update Log
+
+### Anisina v3 (2016-09-4)
+
+- Fix Index Pages Http Security Tips
+- Add More Animation
+- Support Web Emoji , here if [use guide](http://haojen.github.io/2016/09/03/Emoji-Demo/) , is very simple.
+- Support Favicon , you can in `_config.yml` add `favicon: yourImagesPath.png`
+- Font Style Adjust
+- Post page Toc Adjust
+- Bug Fix
 
 ### Anisina v2.01 （2016-08-07）
 
