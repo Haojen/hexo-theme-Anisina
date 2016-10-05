@@ -31,15 +31,24 @@
                     <li>
                         <a href="<%= config.root %>">Home</a>
                     </li>
-
+					<% var about = false; %>
                     <% site.pages.forEach(function(page){ %>
                         <% if(page.title){ %>
+							<% if(page.title == "about") { %>
+								<% about = true; %>
+							<% } else { %>
                         <li>
                             <a href="<%= config.root %><%= page.path.replace('index.html', '') %>"><%= page.title %></a>
                         </li>
-                        <% } %>
+							<% } %>
+						<% } %>
                     <% }); %>
-
+					
+					<% if (about == true) { %>
+						<li>
+							<a href="<%- url_for(config.root + 'about') %>">About</a>
+						</li>
+					<% } %>
                 </ul>
             </div>
         </div>
