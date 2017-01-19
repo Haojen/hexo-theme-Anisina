@@ -91,13 +91,16 @@ thanks @HipHopCoderS PR :) and all users
 
 1. Init
 
-		git clone https://github.com/Haojen/hexo-theme-Anisina.git
+	First enter your hexo root folder, then execute the follwing commands
+
+		git clone https://github.com/Haojen/hexo-theme-Anisina.git themes/Anisina
 		
-   then copy this folder into your Hexo  **theme** folder
 
 2. Modify ```_config.yml```file with your own info. look like this :
 
 		themes: Anisina
+
+	Here theme's name must same as the theme folder name.
 	
 3. Or you can copy my theme Anisina `_config.yml` into you hexo blog directory ,  replace default `_config.yml`
 
