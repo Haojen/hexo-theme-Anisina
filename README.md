@@ -5,7 +5,7 @@
 > simple / grace / small
 
 <img src="./Screenshots/Anisina.png" />
-<!--
+
 ## Next Version Think About :triangular_flag_on_post:
 
 - Add Custom Favicon Function ( thanks @thankuu advice :blush: )
