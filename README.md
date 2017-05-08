@@ -11,7 +11,7 @@
 - Add Custom Favicon Function ( thanks @thankuu advice :blush: )
 - More Animation 
 - Bug fix
-- And If You Have any Best Idea , Please Contact To me , My Email haojen.ma@gmail.com , Or Create A Issue :smile:-->
+- And If You Have any Best Idea , Please Contact To me , My Email haojen.ma@gmail.com , Or Create A Issue :smile:
 
 ## Update Log
 
