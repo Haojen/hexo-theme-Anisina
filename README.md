@@ -6,14 +6,12 @@
 
 <img src="./Screenshots/Anisina.png" />
 
-## Next Version Think About :triangular_flag_on_post:
-
-- Add Custom Favicon Function ( thanks @thankuu advice :blush: )
-- More Animation 
-- Bug fix
-- And If You Have any Best Idea , Please Contact To me , My Email haojen.ma@gmail.com , Or Create A Issue :smile:
 
 ## Update Log
+
+### Anisina V3.1 (2017-05-9)
+
+- Add Livere disqus (in your `_config.yml` add `use_livere: true` , and config you livere uid `livere_uid: hereIsYourLivereID`, here is Livere website <a href="https://livere.com/">go to livere </a>, and remember clear you another disqus system, like duoshuo.)
 
 ### Anisina v3 (2016-09-4)
 
