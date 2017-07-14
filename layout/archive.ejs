@@ -13,7 +13,7 @@ layout: layout
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
                 <div class="site-heading text-center">
-                    <h1><%= config.archive.title || config.title %></h1>
+                    <h1><%= config.archive.title || config.title || ""%></h1>
                     <span class="subheading"><%= config.archive.description || config.subtitle || "" %></span>
                 </div>
             </div>
@@ -74,4 +74,3 @@ layout: layout
             <% }) %>
         </div>
     </div>
-</div>
