@@ -161,7 +161,11 @@ layout: layout
                 <div class="short-about">
                     <!--侧边栏头像-->
                     <% if(config['sidebar-avatar']) { %>
-                    <img src="<%= config['sidebar-avatar'] %>"/>
+                    <img id="portrait" src="<%= config['sidebar-avatar'] %>"/>
+                    <script><!--用户头像由于宽高不等，显示为椭圆，改为圆形-->
+                        var img=document.getElementById('portrait');
+                        img.style.height=img.offsetWidth+"px";
+                    </script>
                     <% } %>
                     <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
                     <% if(config['sidebar-about-description']) { %>
