@@ -19,10 +19,17 @@ layout: page
             <%- post.subtitle %>
         </h3>
         <% } %>
-        <div class="post-content-preview">
+        <div class="post-content-preview" >
             <p>
-                <%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %>
+                &nbsp; &nbsp; &nbsp; &nbsp;<%- truncate(strip_html(post.content).replace("前言",""), {length: 150, omission: '...'}) %>
             </p>
+            <!-- <script>
+                    var preview=document.getElementById("ppp");
+                    var str=preview.textContent;
+                    console.log(str instanceof Object,preview.textContent instanceof Object);
+                    console.log(str,str.substring(80),preview.getAttribute("id"));
+                    preview.innerHTML=str.substring(80);
+                </script> -->
         </div>
     </a>
 
@@ -44,7 +51,7 @@ layout: page
         <% } %>
         <div class="post-content-preview">
             <p>
-                <%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %>
+               &nbsp; &nbsp; &nbsp; &nbsp;<%- truncate(strip_html(post.content).replace("前言",""), {length: 150, omission: '...'}) %>
             </p>
         </div>
     </a>

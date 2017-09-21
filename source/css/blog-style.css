@@ -437,7 +437,7 @@ article blockquote cite:before{
 .intro-header .post-heading .meta {
     font-weight: 300;
     font-size: 14px;
-    color: #eee;
+    color: #757575;
 }
 
 .intro-header .post-heading .meta span {
@@ -531,7 +531,7 @@ a:focus {
 }
 
 .post-content-preview p {
-    color: #555;
+    color: #828282;
 }
 
 .section-heading {
@@ -740,7 +740,7 @@ img::-moz-selection {
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     padding: 0 10px;
-    color: #ffffff;
+    color: #757575;
     line-height: 24px;
     font-size: 12px;
     text-decoration: none;
@@ -1050,7 +1050,7 @@ img::-moz-selection {
     margin-top: 30px;
     list-style: none;
     color: darkgrey;
-    border-left: #eee 3px solid;
+    /* border-left: #eee 3px solid; */
     padding-left: 12px;
 }
 
@@ -1083,6 +1083,10 @@ img::-moz-selection {
     overflow: auto;
     z-index:1;
     background-color: #fff;
+    /* xq */
+    margin-right:30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #C5C4C4;
 }
 
 .navbar-custom.is-fixed {
@@ -1136,7 +1140,7 @@ img::-moz-selection {
 }
 .post-title-fixed span{
     display: inline-block;
-    max-width: 250px;
+    /* max-width: 300px; */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1145,13 +1149,18 @@ img::-moz-selection {
 }
 @media screen and (max-width: 1049px){
     .post-title-fixed span{
-        max-width: 180px;
+        /* max-width: 300px; */
         font-size: 15px;
-        margin-left: -160px;
+        /* margin-left: -160px; */
     }
 }
 
-@media screen and (max-width: 880px) , screen and(min-width: 770px){
+/* @media screen and (max-width: 880px) , screen and(min-width: 770px){
+    .post-title-fixed span{
+        display: none;
+    }
+} */
+@media screen and (max-width: 850px) {
     .post-title-fixed span{
         display: none;
     }
@@ -1159,7 +1168,7 @@ img::-moz-selection {
 
 @media screen and  (max-width: 768px){
     .post-title-fixed span{
-        max-width: 160px;
+        max-width: 200px;
         font-size: 14px;
         margin-left: 0;
         top: 59px;

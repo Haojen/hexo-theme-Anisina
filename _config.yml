@@ -15,7 +15,7 @@ SEOTitle: Haojen's blog
 header-img: //o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg
 email: HaojenMa@gmail.com
 description: "马浩珍在 Github 上的个人博客"
-keywords: # seo key words
+keyword: # seo key words
 
 favicon: # your favicon png
 # custom end
@@ -126,7 +126,7 @@ markdown:
     - markdown-it-emoji
 
 ## Themes: https://hexo.io/themes/
-theme: Anisina
+theme: anisina
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

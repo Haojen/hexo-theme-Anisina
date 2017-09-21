@@ -46,7 +46,7 @@ layout: layout
                     </span>
                     <div class="tags text-center">
                         <% page.tags.forEach(function(tag){ %>
-                        <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>"
+                        <a class="tag" href="<%= config.root %>tags/<%= tag.name %>"
                            title="<%= tag.name %>"><%= tag.name %></a>
                         <% }) %>
                     </div>
@@ -63,12 +63,20 @@ layout: layout
 
 <!-- Post Content -->
 <article>
-    <div class="container">
+    <div class="container" style="background-color:white">
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <%- page.content %>
+
                 <hr>
+                <br />
+                <p style="color:#DB4646;background:rgba(0,0,0,0.1);padding:10px 15px;font-size:0.8em">
+                    <strong>
+                        原创文章，如需转载，希望注明出处：<br />
+                        转自 <%= config.SEOTitle %>：<%= page.title %> — <%= config.domain_name + page.path %>
+                    </strong>
+                </p>
                 <% if(config['duoshuo_share'] && config['duoshuo_username']) { %>
                 <!-- 多说 Share start -->
                 <div class="ds-share"
@@ -110,6 +118,17 @@ layout: layout
                     </li>
                     <% } %>
                 </ul>
+
+                <!--PC和WAP自适应版--><!-- 畅言评论 -->
+                <div id="SOHUCS" sid="<%= page.sid %>" ></div> 
+                <script type="text/javascript"> 
+                (function(){ 
+                var appid = 'cytdtTi7J'; 
+                var conf = 'prod_9fc3b119a1c297ac170810e7650696bc'; 
+                var width = window.innerWidth || document.documentElement.clientWidth; 
+                if (width < 960) { 
+                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+                <!-- 畅言评论 -->
 
                 <% if(config['duoshuo_username']) { %>
                 <!-- 多说评论框 start -->

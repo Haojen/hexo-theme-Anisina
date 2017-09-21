@@ -59,17 +59,9 @@ layout: layout
         background-image: none !important;
     }
 
-    /*第一个分界线显示*/
-    /* .custom-haojen-container hr:nth-of-type(1) {
-        display: visible;
-    } */
-    .custom-haojen-container .post-preview:nth-of-type(1) {
-        margin-bottom: 30px;
-    }
-
-    /* <hr>主页博文分界线颜色 */
-    hr {
-        border-color:rgba(0,0,0,0.2);
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
     }
 
     /*主题*/
@@ -149,7 +141,7 @@ layout: layout
     </div>
 </div>
 <!-- Main Content -->
-<div class="container custom-haojen-container" style="background-color:white">
+<div class="container custom-haojen-container">
     <!-- Post Container -->
     <div class="row">
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
@@ -170,55 +162,14 @@ layout: layout
                     <!--侧边栏头像-->
                     <% if(config['sidebar-avatar']) { %>
                     <img id="xqHead" src="<%= config['sidebar-avatar'] %>"/>
-                    <!-- xq head -->
-                    <script>
-                        var img=document.getElementById('xqHead');
-                        img.style.height=img.offsetWidth-10+"px";
-                    </script>
                     <% } %>
                     <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
                     <% if(config['sidebar-about-description']) { %>
                     <p><%= config['sidebar-about-description'] %></p>
                     <% } %>
-                    <!-- <hr> -->
+                    <hr>
                     <!-- SNS Link 社交 -->
                     <ul class="list-inline">
-
-                        <!-- ######### xq sns -->
-                        <style>
-                            .xq-sns-li{
-                                margin:2px 5px;
-                            }
-                            .list-inline .xq-sns-li .xq-sns-img {
-                                width:30px;height:30px;box-shadow:0 0 ;cursor:pointer;margin:0;transition: 0.3s
-                            }
-                            .list-inline .xq-sns-li .xq-sns-img:hover{
-                                box-shadow:0 2px 1px 1px #DFDEDE;
-                            }
-                        </style>
-                        <% if (config.github_username) { %>
-                        <li class="xq-sns-li">
-                            <a target="_blank" class="xq-sns-a" href="https://github.com/<%= config.github_username %>" >
-                                <image class="xq-sns-img" src="/images/static/github.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
-                            </a>
-                        </li>
-                        <% } %>
-                        <% if (config.jianshu_username) { %>
-                        <li class="xq-sns-li">
-                            <a class="xq-sns-a" target="_blank" href="http://www.jianshu.com/u/<%= config.jianshu_username %>" >
-                                <image class="xq-sns-img" src="/images/static/jianshu.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
-                            </a>
-                        </li>
-                        <% } %>
-                        <% if (config.sf_username) { %>
-                        <li class="xq-sns-li">
-                            <a class="xq-sns-a" target="_blank" href="https://segmentfault.com/u/<%= config.sf_username %>" >
-                                <image class="xq-sns-img" src="/images/static/sf.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
-                            </a>
-                        </li>
-                        <% } %>
-                        <!-- ######## xq sns -->
-
                         <% if (config.RSS) { %>
                         <li>
                             <a href="<%= config.root + 'feed.xml' %>">
@@ -271,7 +222,7 @@ layout: layout
                             </a>
                         </li>
                         <% } %>
-                        <!-- 
+
                         <% if (config.github_username) { %>
                         <li>
                             <a target="_blank" href="https://github.com/<%= config.github_username %>">
@@ -281,7 +232,7 @@ layout: layout
                                         </span>
                             </a>
                         </li>
-                        <% } %> -->
+                        <% } %>
 
                         <% if (config.linkedin_username) { %>
                         <li>
@@ -313,7 +264,7 @@ layout: layout
 
             <% if(config.friends) { %>
             <hr>
-            <h5 style="text-align: center;"></h5>
+            <h5 style="text-align: center;">Friends</h5>
             <ul class="list-inline" style="text-align: center;">
                 <% config.friends.forEach(function(friend){ %>
                 <li><a href="<%= friend.href %>" target="_blank"><%= friend.title %></a></li>

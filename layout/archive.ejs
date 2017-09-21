@@ -22,10 +22,9 @@ layout: layout
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text- ">
-		<!--类似这里用户没有设置 config.archive 时会报错，建议将config.title提前，使用用户默认配置，或者判断一下-->
-                    <h1><%= config.archive.title || config.title || ""%></h1>
-                    <span class="subheading"><%= config.archive.description || config.subtitle || "" %></span>
+                <div class="site-heading text-center">
+                    <h1><%= config.title || config.archive.title || ""%></h1>
+                    <span class="subheading"><%= config.subtitle ||config.archive.description ||  "" %></span>
                 </div>
             </div>
         </div>

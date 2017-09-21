@@ -1,0 +1,86 @@
+---
+layout: layout
+---
+<style>
+    .intro-header .site-heading {
+        margin: 50px;
+    }
+    <% if (page["cdn"] === 'header-off'){%>
+    header.intro-header {
+        background-image: url('<%= page["header-img"] || config["post-default-img"]%>');
+    }
+
+    <%} else {%>
+    header.intro-header {
+        background-image: url('<%- page["header-img"]?config["cdn-url"]+page["header-img"]+config["clip-content"] : config["post-default-img"]%>')
+    }
+    <% } %>
+</style>
+
+<!-- Page Header -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading text-center">
+                    <h1><%= config.archive.title || config.title || ""%></h1>
+                    <span class="subheading"><%= config.archive.description || config.subtitle || "" %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<% 
+   var lastYear;
+   var lastMonth;
+%>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- archive list -->
+            <% site.posts.sort('date', 'desc').each(function(post){ %>
+				<% var year = post.date.year(); %>
+				<% var month = post.date.format('MM'); %>
+				<% if (lastYear != year) { %>
+					<% if (lastYear != null) { %>
+					</div><!--month-->
+					</div><!--year-->
+					<% lastMonth = null; %>
+					<% } %>
+					<% lastYear = year; %>
+					<div class="archive archive-year" data-date="<%= year %>">
+						<h2 class="archive-title">
+						<span class="fa fa-archive">
+							<a href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
+						</span>
+						</h2>
+				<% } %>
+				<% if (lastMonth != month) { %>
+					<% if (lastMonth != null) { %>
+					</div><!--month-->
+					<% } %>
+					<% lastMonth = month; %>
+					<div class="archive archive-month" data-date="<%= post.date.format('YYYYMM') %>">
+						<h3 class="archive-title">
+							<a href="<%- url_for(config.archive_dir + '/' + post.date.format('YYYY/MM')) %>"><%=  month %></a>
+						</h3>
+				<% } %>
+				<div class="one-tag-list">
+                <div class="post-preview">
+                    <a href="<%- config.root %><%- post.path %>">
+                        <h4 class="post-title">
+                            <%- post.title || "Untitled" %>
+                        </h4>
+                        <% if (post.subtitle && post.subtitle.length) { %>
+                        <h4 class="post-subtitle">
+                            <%- post.subtitle %>
+                        </h4>
+                        <% } %>
+                    </a>
+                </div>
+				<hr>
+				</div>
+            <% }) %>
+        </div>
+    </div>
