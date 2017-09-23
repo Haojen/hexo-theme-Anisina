@@ -4,6 +4,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 selenium-debug.log
+layout/*_default.ejs
 
 # Editor directories and files
 .idea
