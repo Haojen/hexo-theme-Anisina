@@ -1051,7 +1051,7 @@ img::-moz-selection {
     list-style: none;
     color: darkgrey;
     /* border-left: #eee 3px solid; */
-    padding-left: 12px;
+    padding: 0 12px;
 }
 
 .container .toc-wrap > ol {

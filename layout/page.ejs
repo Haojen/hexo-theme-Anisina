@@ -143,7 +143,7 @@ body {
                         <!--移动端头部显示-->
                         <img src="<%= config['sidebar-avatar'] %>"/>
                         <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
-                        <p><%= config['sidebar-about-description'] %></p>
+                        <p><%- config['sidebar-about-description'] %></p>
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@ body {
                     <% } %>
                     <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
                     <% if(config['sidebar-about-description']) { %>
-                    <p><%= config['sidebar-about-description'] %></p>
+                    <p><%- config['sidebar-about-description'] %></p>
                     <% } %>
                     <!-- <hr> -->
                     <!-- SNS Link 社交 -->
