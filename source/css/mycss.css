@@ -9,6 +9,27 @@ body {
     background-color:rgba(255,255,255,0.7);
     border-radius:20px
 }
+
+  footer {
+    font-size: 20px;
+    padding: 0;
+    margin:20px auto;
+}
 footer .container{
     margin:0;
+}
+@media (min-width: 768px) {
+footer {
+    width: 750px;
+}
+}
+@media (min-width: 992px) {
+footer {
+    width: 970px;
+}
+}
+@media (min-width: 1200px) {
+footer {
+    width: 1170px;
+}
 }

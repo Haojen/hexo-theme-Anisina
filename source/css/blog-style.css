@@ -555,15 +555,7 @@ a:focus {
     font-size: 20px;
     padding: 50px 0 65px;
 } */
-footer {
-    font-size: 20px;
-    padding: 0;
-    margin:20px auto;
-    width:970px;
-}
-footer .container{
-    margin:0;
-}
+
 footer .list-inline {
     margin: 0;
     padding: 0;
