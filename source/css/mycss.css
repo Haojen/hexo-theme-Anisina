@@ -1,0 +1,14 @@
+body {
+    background-color:#F5F5C8
+}
+.container.xqpostback{
+    background-color:rgba(255,255,255,0.9);
+    border-radius:20px
+}
+.container.xqback{
+    background-color:rgba(255,255,255,0.7);
+    border-radius:20px
+}
+footer .container{
+    margin:0;
+}
