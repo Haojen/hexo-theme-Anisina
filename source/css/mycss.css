@@ -1,9 +1,10 @@
 body {
     background-color:#F5F5C8
 }
-.container.xqpostback{
+.xqpostback{
     background-color:rgba(255,255,255,0.9);
-    border-radius:20px
+    border-radius:20px;
+    padding:0 0 0 35px;
 }
 .container.xqback{
     background-color:rgba(255,255,255,0.7);
