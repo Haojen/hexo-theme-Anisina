@@ -74,7 +74,7 @@ layout: layout
                 <p style="color:#DB4646;background:rgba(0,0,0,0.1);padding:10px 15px;font-size:0.8em">
                     <strong>
                         原创文章，如需转载，希望注明出处：<br />
-                        转自 <%= config.SEOTitle %>：<%= page.title %> — <%= config.domain_name + page.path %>
+                        转自 <%= config.SEOTitle %>：<%= page.title %> — <%= config.url + config.root + page.path %>
                     </strong>
                 </p>
                 <% if(config['duoshuo_share'] && config['duoshuo_username']) { %>
@@ -108,13 +108,13 @@ layout: layout
                     <% if (page.next){ %> <!-- 其实是前一篇 -->
                     <li class="previous">
                         <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top"
-                           title="<%- page.next.title %>">&larr; Previous Post</a>
+                           title="<%= page.next.title %>">&larr; Previous Post</a>
                     </li>
                     <% } %>
                     <% if (page.prev){ %>
                     <li class="next">
                         <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top"
-                            title="<%- page.prev.title %>">Next Post &rarr;</a>
+                            title="<%= page.prev.title %>">Next Post &rarr;</a>
                     </li>
                     <% } %>
                 </ul>
