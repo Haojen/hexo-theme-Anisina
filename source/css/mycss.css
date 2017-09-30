@@ -34,3 +34,12 @@ footer {
     width: 1170px;
 }
 }
+.container .toc-wrap .toc-level-2 > a {
+    color: #0085a1;
+}
+.container .toc-wrap .toc-level-3 > a {
+    color: #F8B82E;
+}
+.container .toc-wrap .toc-level-4 > a {
+    color: #70FAF3;
+}
