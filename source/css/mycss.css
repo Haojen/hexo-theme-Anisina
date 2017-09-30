@@ -5,12 +5,16 @@ body {
     background-color:rgba(255,255,255,0.9);
     border-radius:20px;
     padding:0 15px;
+    word-break: break-all;
 }
 .container.xqback{
     background-color:rgba(255,255,255,0.7);
     border-radius:20px
 }
-
+.custom-haojen-container{
+    /* word-wrap: break-word; */
+    word-break: break-all;
+}
   footer {
     font-size: 20px;
     padding: 0;
