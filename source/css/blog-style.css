@@ -387,8 +387,8 @@ article blockquote cite:before{
 
 .intro-header>.container{
     display: table-cell;
-    vertical-align: middle;
-    padding: 55px 15px 15px;
+    /* vertical-align: middle; */
+    padding: 65px 15px 15px;
 }
 
 
