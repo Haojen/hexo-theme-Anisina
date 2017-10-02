@@ -20,8 +20,8 @@ layout: page
         </h3>
         <% } %>
         <div class="post-content-preview" >
-            <p>
-                &nbsp; &nbsp; &nbsp; &nbsp;<%- truncate(strip_html(post.content).replace("前言",""), {length: 150, omission: '...'}) %>
+            <p> <!-- slice()将负数加数组长度；search(),indexOf()返回匹配项索引或-1 -->
+                <%- truncate("&nbsp; &nbsp; &nbsp;&nbsp;"+strip_html(post.content.slice(post.content.indexOf("</h1>"),post.content.indexOf("<table>"))), {length: 150, omission: '...'}) %>
             </p>
             <!-- <script>
                     var preview=document.getElementById("ppp");
@@ -51,7 +51,7 @@ layout: page
         <% } %>
         <div class="post-content-preview">
             <p>
-               &nbsp; &nbsp; &nbsp; &nbsp;<%- truncate(strip_html(post.content).replace("前言",""), {length: 150, omission: '...'}) %>
+               <%- truncate("&nbsp; &nbsp; &nbsp;&nbsp;"+strip_html(post.content.slice(post.content.indexOf("</h1>"),post.content.indexOf("<table>"))), {length: 150, omission: '...'}) %>
             </p>
         </div>
     </a>
