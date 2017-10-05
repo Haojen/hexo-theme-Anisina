@@ -12,7 +12,7 @@ layout: layout
 
     <%} else {%>
     header.intro-header {
-        background-image: url('<%- page["header-img"]?config["cdn-url"]+page["header-img"]+config["clip-content"] : config["post-default-img"]%>')
+        background-image: url('<%- page["header-img"]?(config["cdn-url"]?config["cdn-url"]:"")+page["header-img"]+config["clip-content"] : config["post-default-img"]%>')
     }
     <% } %>
 </style>
