@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer>
-    <div class="container" style="background-color:rgba(255,255,255,0.7);border-radius:20px">
+    <div class="container"> <!-- <% if (is_post()) { %> style="background-color:rgba(255,255,255,0.7);border-radius:20px" <% } %> -->
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <br>
@@ -10,21 +10,21 @@
                 <% if (config.github_username) { %>
                     <li class="xq-sns-li">
                         <a class="xq-sns-a" target="_blank" href="https://github.com/<%= config.github_username %>" >
-                            <image class="xq-sns-img" src="/images/static/github.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
+                            <image class="xq-sns-img" src="/images/static/github.png"></image>
                         </a>
                     </li>
                 <% } %>
                 <% if (config.jianshu_username) { %>
                     <li class="xq-sns-li">
                         <a class="xq-sns-a" target="_blank" href="http://www.jianshu.com/u/<%= config.jianshu_username %>" >
-                            <image class="xq-sns-img" src="/images/static/jianshu.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
+                            <image class="xq-sns-img" src="/images/static/jianshu.png"></image>
                         </a>
                     </li>
                 <% } %>
                 <% if (config.sf_username) { %>
                     <li class="xq-sns-li">
                         <a class="xq-sns-a" target="_blank" href="https://segmentfault.com/u/<%= config.sf_username %>" >
-                            <image class="xq-sns-img" src="/images/static/sf.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
+                            <image class="xq-sns-img" src="/images/static/sf.png"></image>
                         </a>
                     </li>
                 <% } %>
@@ -82,17 +82,6 @@
                         </a>
                     </li>
                 <% } %>
-<!-- 
-                <% if (config.github_username) { %>
-                    <li>
-                        <a target="_blank"  href="https://github.com/<%= config.github_username %>">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                <% } %> -->
 
                 <% if (config.linkedin_username) { %>
                     <li>

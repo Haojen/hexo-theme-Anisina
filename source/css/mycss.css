@@ -15,7 +15,7 @@ body {
     /* word-wrap: break-word; */
     word-break: break-all;
 }
-  footer {
+footer {
     font-size: 20px;
     padding: 0;
     margin:20px auto;
@@ -47,3 +47,18 @@ footer {
 .container .toc-wrap .toc-level-4 > a {
     color: #70FAF3;
 }
+.xq-sns-li{
+    margin:2px 5px;
+}
+.list-inline .xq-sns-li .xq-sns-img {
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    margin:0;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 0;
+}
+/* .list-inline .xq-sns-li .xq-sns-img:hover{
+    box-shadow:0 2px 1px 1px #DFDEDE;
+} */

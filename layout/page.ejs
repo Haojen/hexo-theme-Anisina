@@ -185,35 +185,25 @@ layout: layout
                     <ul class="list-inline">
 
                         <!-- ######### xq sns -->
-                        <style>
-                            .xq-sns-li{
-                                margin:2px 5px;
-                            }
-                            .list-inline .xq-sns-li .xq-sns-img {
-                                width:30px;height:30px;box-shadow:0 0 ;cursor:pointer;margin:0;transition: 0.3s
-                            }
-                            .list-inline .xq-sns-li .xq-sns-img:hover{
-                                box-shadow:0 2px 1px 1px #DFDEDE;
-                            }
-                        </style>
+                        
                         <% if (config.github_username) { %>
                         <li class="xq-sns-li">
                             <a target="_blank" class="xq-sns-a" href="https://github.com/<%= config.github_username %>" >
-                                <image class="xq-sns-img" src="/images/static/github.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
+                                <image class="xq-sns-img" src="/images/static/github.png"></image>
                             </a>
                         </li>
                         <% } %>
                         <% if (config.jianshu_username) { %>
                         <li class="xq-sns-li">
                             <a class="xq-sns-a" target="_blank" href="http://www.jianshu.com/u/<%= config.jianshu_username %>" >
-                                <image class="xq-sns-img" src="/images/static/jianshu.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
+                                <image class="xq-sns-img" src="/images/static/jianshu.png"></image>
                             </a>
                         </li>
                         <% } %>
                         <% if (config.sf_username) { %>
                         <li class="xq-sns-li">
                             <a class="xq-sns-a" target="_blank" href="https://segmentfault.com/u/<%= config.sf_username %>" >
-                                <image class="xq-sns-img" src="/images/static/sf.png" style="width:30px;height:30px;box-shadow:0 0;cursor:pointer;margin:5px"></image>
+                                <image class="xq-sns-img" src="/images/static/sf.png"></image>
                             </a>
                         </li>
                         <% } %>

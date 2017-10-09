@@ -36,7 +36,7 @@
                         <% if(page.title){ %>
 							<% if(page.title == "about") { %>
 								<% about = true; %>
-							<% } else { %>
+							<% } else if(page.layout=="tags"){ %>
                         <li>
                             <a href="<%= config.root %><%= page.path.replace('index.html', '') %>"><%= page.title %></a>
                         </li>

@@ -401,7 +401,7 @@ article blockquote cite:before{
 .intro-header .site-heading h1,
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
-    text-shadow: 0 0 40px black;
+    text-shadow: 0 3px 1px black;
 }
 
 .intro-header .site-heading .subheading,
@@ -431,7 +431,7 @@ article blockquote cite:before{
     font-size: 30px;
     line-height: 1.4;
     margin-bottom: 0;
-    text-shadow: 0 0 40px black;
+    text-shadow: 0 3px  1px black;
 }
 
 .intro-header .post-heading .meta {
@@ -1001,11 +1001,11 @@ img::-moz-selection {
 }
 
 .page-fullscreen footer .copyright {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .page-fullscreen footer .copyright a {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .page-fullscreen footer .copyright a:hover {

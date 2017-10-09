@@ -27,6 +27,10 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
+# this info will show About page
+user_contact: user_contact
+user_introduction: user_introduction
+
 # SNS settings
 # RSS:
 weibo_username: haojen
