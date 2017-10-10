@@ -2,8 +2,16 @@
 <footer>
     <div class="container"> <!-- <% if (is_post()) { %> style="background-color:rgba(255,255,255,0.7);border-radius:20px" <% } %> -->
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
+            <!-- 粒子背景效果 -->
+            <% if (config.open_bg_particle){ %>
+            <%- js('js/particles.min.js') %>
+            <div id="particles"></div>
+            <%- js('js/particles') %>
+            <% } %>
+            <!-- 粒子背景效果 -->
+                <!-- xq-footer-mobile 移动端底部宽度限制 -->
+            <div class="xq-footer-mobile col-lg-2 col-sm-4 col-sm-offset-4 col-lg-offset-5 col-md-4 col-md-offset-4 text-center">
+               
                 <ul class="list-inline text-center">
 
                 <!-- ######### xq sns -->
@@ -96,7 +104,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; <%= config.title %> <%= new Date().getFullYear() %>
+                    Copyright &copy; <%= config.title %>
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>

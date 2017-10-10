@@ -18,7 +18,9 @@ body {
 footer {
     font-size: 20px;
     padding: 0;
-    margin:20px auto;
+    margin:40px auto 20px;
+    position: relative;
+    z-index: -1;
 }
 footer .container{
     margin:0;
@@ -37,6 +39,13 @@ footer {
 footer {
     width: 1170px;
 }
+}
+/* xq-footer-mobile 移动端底部宽度限制 */
+@media (max-width: 767px) {
+    .xq-footer-mobile{
+        margin:0 auto;
+        width:200px;
+    }
 }
 .container .toc-wrap .toc-level-2 > a {
     color: #0085a1;
@@ -62,3 +71,9 @@ footer {
 /* .list-inline .xq-sns-li .xq-sns-img:hover{
     box-shadow:0 2px 1px 1px #DFDEDE;
 } */
+
+#particles {
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    /* z-index:-1 */
+}

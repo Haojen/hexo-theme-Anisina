@@ -11,13 +11,14 @@
 </style>
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
+<!-- particles 粒子背景效果
+<%- partial('_partial/particles') %> -->
+
 <%- partial('_partial/nav') %>
 <!-- Main Content -->
 <%- body || '01_编译错误' %>
 <!-- Footer -->
 <%- partial('_partial/footer') %>
-<!-- particles 粒子背景效果 -->
-<%- partial('_partial/particles') %>
 
 <!--wechat title img-->
 <!-- <img class="wechat-title-img" src="<%= config['sidebar-avatar'] %>"> -->
