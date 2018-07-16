@@ -9,6 +9,10 @@
 
 ## Update Log
 
+### Anisina V3.2 (2018-07-16) 
+
+- Support [Valine](https://valine.js.org/) comment system
+
 ### Anisina V3.1 (2017-05-9)
 
 - Add Livere disqus (in your `_config.yml` add `use_livere: true` , and config you livere uid `livere_uid: hereIsYourLivereID`, here is Livere website <a href="https://livere.com/">go to livere </a>, and remember clear you another disqus system, like duoshuo.)
