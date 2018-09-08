@@ -51,6 +51,16 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Use livere
 use_livere:
 
+# Valine comment system https://valine.js.org
+valine: 
+  enable: false
+  appid:  #Leancloud应用的appId
+  appkey:  #Leancloud应用的appKey
+  verify: false #验证码
+  notify: false #评论回复提醒
+  avatar: mm #评论列表默认头像样式
+  placeholder: Just go go #评论框占位符
+
 # Analytics settings
 # Baidu Analytics
 ba_track_id:
