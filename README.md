@@ -9,6 +9,10 @@
 
 ## Update Log
 
+### Anisina V3.3 (2018-11-07) 
+
+- Support Mathjax
+
 ### Anisina V3.2 (2018-07-16) 
 
 - Support [Valine](https://valine.js.org/) comment system
