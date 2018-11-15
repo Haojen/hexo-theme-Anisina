@@ -86,7 +86,8 @@
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
-                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                    Using theme <a href="https://github.com/Haojen/hexo-theme-Anisina">Anisina</a>,
+                    Hosted by <a href="https://pages.coding.me">Coding Pages</a>
                 </p>
 
             </div>
@@ -201,6 +202,7 @@
 <% } %>
 
 <!-- swiftype -->
+<% if (config.swiftype_key) { %>    
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
   (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
@@ -209,5 +211,6 @@
 
   _st('install','<%= config.swiftype_key%>','2.0.0');
 </script>
+<% } %>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
