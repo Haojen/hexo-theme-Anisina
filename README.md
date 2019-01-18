@@ -155,7 +155,13 @@ You can easily get stared by modifying ```config.yml```
 
 1. use hexo command `hexo new page "Tags"`
 2. then open `yourblog/source` folder , find `Tags/index.md`, set `layout: tags`
-3. after use hexo cammand reset hexo `hexo clean && hexo g` , all done : )
+3. after use hexo command reset hexo `hexo clean && hexo g` , all done : )
+
+#### Create Categories page
+
+1. use hexo command `hexo new page "Categories"`
+2. then open `yourblog/source` folder, find `Categories/index.md`, set `layout: categories`
+3. after use hexo command reset hexo `hexo clean && hexo g`, all done :)
 
 
 #### 	cdn-url
