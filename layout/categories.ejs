@@ -1,0 +1,65 @@
+---
+layout: layout
+---
+<style>
+    .intro-header .site-heading {
+        margin: 50px;
+    }
+    <% if (page["cdn"] === 'header-off'){%>
+    header.intro-header {
+        background-image: url('<%= page["header-img"] || config["post-default-img"]%>');
+    }
+
+    <%} else {%>
+    header.intro-header {
+        background-image: url('<%- page["header-img"]?(config["cdn-url"]?config["cdn-url"]:"")+page["header-img"]+config["clip-content"] : config["post-default-img"]%>')
+    }
+    <% } %>
+</style>
+
+<!-- Page Header -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading text-center">
+                    <h1><%= page.title || config.title %></h1>
+                    <span class="subheading"><%= page.description || config.subtitle || "" %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- 目录列表 -->
+            <% site.categories.map(function(category){ %>
+                <div class="one-tag-list">
+                <% if (category.posts.length > 0) { %>
+                    <span class="fa fa-minus-square-o listing-seperator" id="<%= category.name %>">
+                        <span class="tag-text"><%= category.name %></span>
+                    </span>
+                    <% category.posts.map(function(post){ %>
+                    <div class="post-preview">
+                        <a href="<%- config.root %><%- post.path %>">
+                            <h2 class="post-title">
+                                <%- post.title || "Untitled" %>
+                            </h2>
+                            <% if (post.subtitle && post.subtitle.length) { %>
+                            <h3 class="post-subtitle">
+                                <%- post.subtitle %>
+                            </h3>
+                            <% } %>
+                        </a>
+                    </div>
+                    <hr>
+                    <% }) %>
+                <% } %>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
