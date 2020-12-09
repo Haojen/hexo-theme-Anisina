@@ -91,7 +91,7 @@ thanks @HipHopCoderS PR :) and all users
 - SEO
 - Immersive status bar
 - Search
-- Preivew Statistical
+- Preview Statistical
 
 ### Install
 
