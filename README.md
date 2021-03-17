@@ -305,4 +305,9 @@ and also you can help me fix bugs and add new feature :)
 
 ## License
 Apache License Version 2.0
+
+
+## And my another Hexo theme
+This it [Hexo-theme-Claudia](https://github.com/Haojen/hexo-theme-Claudia), hope you like it!
+
 	
